@@ -7,7 +7,6 @@ package healthcalc;
  *
  */
 public interface HealthCalc {
-	
 	/**
 	 * Calculate the ideal weight (IW) of a person following the Lorentz formula:
 	 * For men: IW = height - 100 - (height - 150) / 4)
@@ -18,7 +17,7 @@ public interface HealthCalc {
 	 * @return 		 	The ideal weight of the person (kg).
 	 * @throws Exception 
 	 */
-	public float idealWeight(int height, char gender) throws Exception;
+	float idealBodyWeight(int height, char gender) throws HealthCalcException;
 	
 	/**
 	 * Calculate the Basal Metabolic Rate (BMR) of a person with the Harris-Benedict formula:
@@ -32,5 +31,7 @@ public interface HealthCalc {
 	 * @return	  		The Basal Metabolic Rate of the person (kcal/day).
 	 * @throws Exception
 	 */
-	public float basalMetabolicRate(float weight, int height, int age, char gender) throws Exception;
+	
+	 
+	float basalMetabolicRate(float weight, int height, int age, char gender) throws HealthCalcException;
 }
