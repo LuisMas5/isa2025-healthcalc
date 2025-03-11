@@ -27,3 +27,8 @@ Tests:
    - **Test Case 8**: Check if an exception is thrown when an invalid gender is provided.
      - **Expected Result**: The function should throw an exception (`HealthCalcException`).
 
+# Test Results
+
+This is the screenshot of the test results using Maven:
+
+![Test Results](results.png)
