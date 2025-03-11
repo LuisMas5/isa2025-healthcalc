@@ -1,6 +1,6 @@
 # isa2025-healthcalc
 Health calculator used in Ingeniería del Software Avanzada
-Tests:
+# Tests:
 ### 1. **Ideal Body Weight Tests**
    - **Test Case 1**: Calculate the ideal body weight for a 180 cm tall man.
      - **Expected Result**: The ideal body weight should be 72.5 kg.
@@ -32,3 +32,7 @@ Tests:
 This is the screenshot of the test results using Maven:
 
 ![Test Results](results.png)
+
+# Commit Changes: 
+This is the screenshot of the commit changes:
+![Commit Changes](commits.png)
