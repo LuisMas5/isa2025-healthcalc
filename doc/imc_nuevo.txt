@@ -1,0 +1,30 @@
+Nombre: Cálculo Índice de Masa Corporal (IMC)
+Stakeholders: 
+    - Usuario: Desea calcular su IMC para evaluar su estado de salud.
+    - Equipo de desarrollo del software: Garantizar el correcto funcionamiento de HealthCalc.
+Actor principal: Usuario
+Ámbito (scope): Aplicación HealthCalc
+Nivel de abstracción: USER GOAL. Se describe una interacción usuario-sistema
+Precondiciones:
+    - El usuario puede ejecutar el programa de la calculadora con éxito.
+    - El usuario debe ingresar un peso y una altura válidos.
+    - La altura debe ser mayor que 0.
+    - El peso debe ser mayor que 0.
+Garantías:
+    - Mínima: Se muestra un mensaje de error al usuario, explicando qué parte ha fallado.
+    - De Éxito: El sistema calcula y muestra el IMC del usuario basado en la fórmula IMC = peso (kg) / altura² (m).
+Trigger: El usuario selecciona la opción "Calcular IMC" en el programa HealthCalc.
+Escenario principal:
+    1. El usuario selecciona la opción "Calcular IMC" en el programa HealthCalc.
+    2. El sistema solicita al usuario los parámetros a rellenar (peso, altura).
+    3. El usuario introduce los valores de los parámetros. 
+    4. El sistema valida los datos ingresados.
+    5. Si los datos son válidos, el sistema calcula el IMC usando la fórmula IMC = peso / altura².
+    6. El sistema muestra el resultado del IMC.
+Extensiones:
+    3a. El usuario introduce parámetros no válidos.
+        3a.1. El sistema muestra un mensaje de error, indicando qué campos son incorrectos.
+        3a.2. Se vuelve a 2.
+    4a. El resultado está fuera de un rango realista.
+        4a.1. El sistema muestra un mensaje de advertencia si el IMC calculado es negativo o irreal.
+        4a.2. Se vuelve a 2.  
