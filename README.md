@@ -36,7 +36,7 @@ This is the screenshot of the test results using Maven:
 
 ## Practice 2:
 ### UML diagram:
-Using Mermaid:
+```mermaid:
 flowchart TD
     A["Usuario"] --> B("Calcular Peso Ideal") & C("Calcular Tasa Metabólica Basal - TMB") & D("Manejo de Excepciones")
     B --> E{"Entradas válidas?"}
