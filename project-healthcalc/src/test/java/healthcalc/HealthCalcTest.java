@@ -28,6 +28,12 @@ public class HealthCalcTest {
     }
 
     @Test
+    @DisplayName("Altura excesiva genera excepción")
+    public void testIdealBodyWeightExcessiveHeight() {
+        assertThrows(HealthCalcException.class, () -> healthCalc.idealBodyWeight(400, 'm'));
+    }
+
+    @Test
     @DisplayName("Género inválido genera excepción")
     public void testIdealBodyWeightInvalidGender() {
         assertThrows(HealthCalcException.class, () -> healthCalc.idealBodyWeight(170, 'x'));
@@ -49,6 +55,18 @@ public class HealthCalcTest {
     @DisplayName("Edad negativa genera excepción")
     public void testBasalMetabolicRateNegativeAge() {
         assertThrows(HealthCalcException.class, () -> healthCalc.basalMetabolicRate(70, 175, -30, 'm'));
+    }
+
+    @Test
+    @DisplayName("Edad excesiva genera excepción")
+    public void testBasalMetabolicRateExcessiveAge() {
+        assertThrows(HealthCalcException.class, () -> healthCalc.basalMetabolicRate(70, 175, 200, 'm'));
+    }
+
+    @Test
+    @DisplayName("Peso excesivo genera excepción")
+    public void testBasalMetabolicRateExcessiveWeight() {
+        assertThrows(HealthCalcException.class, () -> healthCalc.basalMetabolicRate(1000, 175, 30, 'm'));
     }
 
     @Test
