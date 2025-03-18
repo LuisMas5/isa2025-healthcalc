@@ -1,5 +1,6 @@
 # isa2025-healthcalc
 Health calculator used in Ingeniería del Software Avanzada
+## Practice 1:
 Tests:
 ### 1. **Ideal Body Weight Tests**
    - **Test Case 1**: Calculate the ideal body weight for a 180 cm tall man.
@@ -32,3 +33,18 @@ Tests:
 This is the screenshot of the test results using Maven:
 
 ![Test Results](results.png)
+
+## Practice 2:
+### UML diagram:
+```mermaid:
+flowchart TD
+    A["Usuario"] --> B("Calcular Peso Ideal") & C("Calcular Tasa Metabólica Basal - TMB") & D("Manejo de Excepciones")
+    B --> E{"Entradas válidas?"}
+    E -- Sí --> F["Calcular peso ideal"]
+    E -- No --> G["Lanzar excepción: Altura inválida"] & H["Lanzar excepción: Género inválido"]
+    C --> I{"Entradas válidas?"}
+    I -- Sí --> J["Calcular TMB"]
+    I -- No --> K["Lanzar excepción: Peso inválido"] & L["Lanzar excepción: Altura inválida"] & M["Lanzar excepción: Edad inválida"] & N["Lanzar excepción: Género inválido"]
+    D --> O["Altura negativa"] & P["Altura excesiva"] & Q["Edad negativa"] & R["Edad excesiva"] & S["Género inválido"]
+```
+![Diagrama de Casos de Uso](doc/midiagrama.png)
