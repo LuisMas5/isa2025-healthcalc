@@ -48,3 +48,23 @@ flowchart TD
     D --> O["Altura negativa"] & P["Altura excesiva"] & Q["Edad negativa"] & R["Edad excesiva"] & S["Género inválido"]
 ```
 ![Diagrama de Casos de Uso](doc/midiagrama.png)
+### Extended UML diagram:
+```mermaid:
+flowchart TD
+    A["Usuario"] --> B("Calcular Peso Ideal") & C("Calcular Tasa Metabólica Basal - TMB") & D("Manejo de Excepciones") & X("Calcular Índice de Masa Corporal - IMC") & Y("Calcular Ritmo Máximo Cardíaco")
+    B --> E{"Entradas válidas?"}
+    E -- Sí --> F["Calcular peso ideal"]
+    E -- No --> G["Lanzar excepción: Altura inválida"] & H["Lanzar excepción: Género inválido"]
+    C --> I{"Entradas válidas?"}
+    I -- Sí --> J["Calcular TMB"]
+    I -- No --> K["Lanzar excepción: Peso inválido"] & L["Lanzar excepción: Altura inválida"] & M["Lanzar excepción: Edad inválida"] & N["Lanzar excepción: Género inválido"]
+    D --> O["Altura negativa"] & P["Altura excesiva"] & Q["Edad negativa"] & R["Edad excesiva"] & S["Género inválido"]
+    X --> T{"Entradas válidas?"}
+    T -- Sí --> U["Calcular IMC: BMI = peso (kg) / altura² (m)"]
+    T -- No --> V["Lanzar excepción: Peso inválido"] & W["Lanzar excepción: Altura inválida"]
+    Y --> Z{"Entradas válidas?"}
+    Z -- Sí --> AA["Calcular Ritmo Máximo Cardíaco: 220 - Edad"]
+    Z -- No --> AB["Lanzar excepción: Edad inválida"]
+```
+![Diagrama de Casos de Uso](doc/diagramaextendido.png)
+
