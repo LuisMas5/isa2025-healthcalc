@@ -46,4 +46,5 @@ flowchart TD
     I -- Sí --> J["Calcular TMB"]
     I -- No --> K["Lanzar excepción: Peso inválido"] & L["Lanzar excepción: Altura inválida"] & M["Lanzar excepción: Edad inválida"] & N["Lanzar excepción: Género inválido"]
     D --> O["Altura negativa"] & P["Altura excesiva"] & Q["Edad negativa"] & R["Edad excesiva"] & S["Género inválido"]
-
+```
+![Diagrama de Casos de Uso](doc/midiagrama.png)
