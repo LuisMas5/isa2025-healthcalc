@@ -68,3 +68,39 @@ flowchart TD
 ```
 ![Diagrama de Casos de Uso](doc/diagramaextendido.png)
 
+# Use case description:
+# Body Mass Index (BMI) Calculation
+## Stakeholders:
+- **User**: Wants to calculate their BMI to assess their health status.
+- **Software development team**: Ensure the proper functioning of HealthCalc.
+## Main actor:
+- **User**
+## Scope:
+- **HealthCalc application**
+## Level of abstraction:
+- **USER GOAL**: Describes a user-system interaction.
+## Preconditions:
+- The user can successfully run the calculator program.
+- The user must enter valid weight and height.
+- Height must be greater than 0.
+- Weight must be greater than 0.
+## Guarantees:
+- **Minimal**: An error message is displayed to the user, explaining which part has failed.
+- **Successful**: The system calculates and shows the user's BMI based on the formula BMI = weight (kg) / height² (m).
+## Trigger:
+- The user selects the "Calculate BMI" option in the HealthCalc program.
+## Main Scenario:
+1. The user selects the "Calculate BMI" option in the HealthCalc program.
+2. The system prompts the user to fill in the parameters (weight, height).
+3. The user enters the parameter values.
+4. The system validates the entered data.
+5. If the data is valid, the system calculates the BMI using the formula BMI = weight / height².
+6. The system displays the BMI result.
+## Extensions:
+### 3a. The user enters invalid parameters.
+  - 3a.1. The system displays an error message, indicating which fields are incorrect.
+  - 3a.2. Returns to step 2.
+### 4a. The result is outside a realistic range.
+  - 4a.1. The system displays a warning message if the calculated BMI is negative or unrealistic.
+  - 4a.2. Returns to step 2.
+
